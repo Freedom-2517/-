@@ -8,34 +8,44 @@
 #include <stdio.h>
 #include <malloc.h>
 #include <conio.h>
-#include <windows.h>
-
-int main()
-{	
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-	int SizeArray = 0;
-	int Deleted = 0;
-	char *ans = NULL;
-	free(ans);
-	char c;
-	const char space = 32, tab = 10, enter = 9, end = 26;
+#define SPACE 32
+#define TAB 10
+#define ENTER 9
+#define END 26
+char c;
+char* read(int c, int* SizeArray, int* Deleted)
+{
+	char* ans = NULL;
 	do
 	{
 		c = getchar();
-		if (c != space && c != tab && c != enter && c != EOF && c != end)
+		if (c != SPACE && c != TAB && c != ENTER && c != EOF && c != END)
 		{
-			ans = (char*)realloc(ans, (SizeArray + 1) * sizeof(char));
-			ans[SizeArray] = c;
-			SizeArray++;
+			ans = (char*)realloc(ans, (*SizeArray + 1) * sizeof(char));
+			ans[*SizeArray] = c;
+			(*SizeArray)++;
 		}
-		else Deleted++;
-	} while (c != EOF && c != 26);
-	printf_s("%d\n", --Deleted);
+		else (*Deleted)++;
+	} while (c != EOF && c != END);
+	return ans;
+}
+void write(int SizeArray, char* ans,  int Deleted)
+{
 	for (int i = 0; i < SizeArray; i++)
 	{
 		printf_s("%c", ans[i]);
 	}
+	printf_s("%d\n", --Deleted);
+}
+int main()
+{	
+	int SizeArray = 0;
+	int Deleted = 0;
+	char *ans = NULL;
+	free(ans);
+	ans = read(c, &SizeArray, &Deleted);
+	printf_s("%d\n", --Deleted);
+	write(SizeArray, ans, Deleted);
 	_getch();
 	return 0;
 }
