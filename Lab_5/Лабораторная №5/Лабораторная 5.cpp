@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS 
+п»ї#define _CRT_SECURE_NO_WARNINGS 
 
 #include <stdio.h> 
 #include <conio.h>
@@ -39,12 +39,12 @@ FILE* f_Films = fopen("output.txt", "w");
 
 void Choice()
 {
-	printf("Доступные операции: \n");
-	printf(" 1-Добавить фильм \n");
-	printf(" 2-Поиск фильма\n");
-	printf(" 3-Сортировка по имени\n");
-	printf(" 4-Посмотреть весь список\n");
-	printf(" 5-Завершить\n");
+	printf("Р”РѕСЃС‚СѓРїРЅС‹Рµ РѕРїРµСЂР°С†РёРё: \n");
+	printf(" 1-Р”РѕР±Р°РІРёС‚СЊ С„РёР»СЊРј \n");
+	printf(" 2-РџРѕРёСЃРє С„РёР»СЊРјР°\n");
+	printf(" 3-РЎРѕСЂС‚РёСЂРѕРІРєР° РїРѕ РёРјРµРЅРё\n");
+	printf(" 4-РџРѕСЃРјРѕС‚СЂРµС‚СЊ РІРµСЃСЊ СЃРїРёСЃРѕРє\n");
+	printf(" 5-Р—Р°РІРµСЂС€РёС‚СЊ\n");
 	
 }
 
@@ -55,30 +55,30 @@ int CheckNumber()
 	{
 		int result = scanf_s("%d", &number);
 		if (result == 0) {
-			printf("Вы ввели не число, так делать не нужно, ПОКА)");
+			printf("Р’С‹ РІРІРµР»Рё РЅРµ С‡РёСЃР»Рѕ, С‚Р°Рє РґРµР»Р°С‚СЊ РЅРµ РЅСѓР¶РЅРѕ, РџРћРљРђ)");
 			_getch();
 			exit(1);
 		}
 		if (number < 1 || number > 5)
-			printf("Неверная команда\n");
+			printf("РќРµРІРµСЂРЅР°СЏ РєРѕРјР°РЅРґР°\n");
 	}
 		while (number < 1 || number > 5);
 		return number;
 }
 void addfilm()
 {
-	printf("Введите Название фильма\n");
+	printf("Р’РІРµРґРёС‚Рµ РќР°Р·РІР°РЅРёРµ С„РёР»СЊРјР°\n");
 	getchar();
 	gets_s(Films[Num_films].Name, MAX_LENGTH_FILM + 1);
-	printf("Введите Имя режиссера\n");
+	printf("Р’РІРµРґРёС‚Рµ РРјСЏ СЂРµР¶РёСЃСЃРµСЂР°\n");
 	scanf("%s", Films[Num_films].Author.Name);
-	printf("Введите Фамилию режиссера\n");
+	printf("Р’РІРµРґРёС‚Рµ Р¤Р°РјРёР»РёСЋ СЂРµР¶РёСЃСЃРµСЂР°\n");
 	scanf("%s", Films[Num_films].Author.Surname);
-	printf("Введите дату создания фильма\n");
+	printf("Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ СЃРѕР·РґР°РЅРёСЏ С„РёР»СЊРјР°\n");
 	scanf("%d", &Films[Num_films].Year);
-	printf("Введите бюджет фильма\n");
+	printf("Р’РІРµРґРёС‚Рµ Р±СЋРґР¶РµС‚ С„РёР»СЊРјР°\n");
 	scanf("%d" , &Films[Num_films].Budget);
-	printf("Введите кассовые сборы\n");
+	printf("Р’РІРµРґРёС‚Рµ РєР°СЃСЃРѕРІС‹Рµ СЃР±РѕСЂС‹\n");
 	scanf("%d", &Films[Num_films].BoxOffice);
 	Num_films++;
 
@@ -93,8 +93,8 @@ void searchfilm()
 {
 	int x;
 	char c[MAX_LENGTH_FILM];
-	printf("По какому параментру вы хотите найти фильм?\n");
-	printf("1-Имя\n 2-Фамилия\n 3-Название фильма\n 4-Год создания\n");
+	printf("РџРѕ РєР°РєРѕРјСѓ РїР°СЂР°РјРµРЅС‚СЂСѓ РІС‹ С…РѕС‚РёС‚Рµ РЅР°Р№С‚Рё С„РёР»СЊРј?\n");
+	printf("1-РРјСЏ\n 2-Р¤Р°РјРёР»РёСЏ\n 3-РќР°Р·РІР°РЅРёРµ С„РёР»СЊРјР°\n 4-Р“РѕРґ СЃРѕР·РґР°РЅРёСЏ\n");
 	scanf("%d", &x);
 	scanf("%s", c);
 	for (int i = 0; i < Num_films; i++)
@@ -181,25 +181,25 @@ int main()
 		{
 		case 1: {
 			addfilm();
-			printf("Фильм Добавлен\n\n");
+			printf("Р¤РёР»СЊРј Р”РѕР±Р°РІР»РµРЅ\n\n");
 		}
 			break;
 		case 2: {
 			searchfilm();
-			printf("Поиск завершен\n\n");
+			printf("РџРѕРёСЃРє Р·Р°РІРµСЂС€РµРЅ\n\n");
 		}
 			break;
 		case 3: {
 			sortfilm();
-			printf("Сортировка завершена\n\n");
+			printf("РЎРѕСЂС‚РёСЂРѕРІРєР° Р·Р°РІРµСЂС€РµРЅР°\n\n");
 		}
 			break;
 		case 4: {
 			writefilms();
-			printf("Список фильмов выведен в файл\n\n");
+			printf("РЎРїРёСЃРѕРє С„РёР»СЊРјРѕРІ РІС‹РІРµРґРµРЅ РІ С„Р°Р№Р»\n\n");
 		}
 			break;
-		case 5: printf("До встречи");
+		case 5: printf("Р”Рѕ РІСЃС‚СЂРµС‡Рё");
 			break;
 		}
 	}
