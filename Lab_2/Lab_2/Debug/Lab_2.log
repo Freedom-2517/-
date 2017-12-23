@@ -1,0 +1,4 @@
+﻿  Лабораторная_2.cpp
+d:\labs\lab\lab_2\lab_2\лабораторная_2.cpp(24): warning C4715: check: значение возвращается не при всех путях выполнения
+  Lab_2.vcxproj -> D:\Labs\Lab\Lab_2\Debug\Lab_2.exe
+  Lab_2.vcxproj -> D:\Labs\Lab\Lab_2\Debug\Lab_2.pdb (Partial PDB)

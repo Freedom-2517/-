@@ -1,3 +1,4 @@
-﻿  Source.cpp
-  Проект2.vcxproj -> C:\Users\thirs\source\repos\Проект2\Debug\Проект2.exe
-  Проект2.vcxproj -> C:\Users\thirs\source\repos\Проект2\Debug\Проект2.pdb (Partial PDB)
+﻿D:\Новая папка\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (Проект2.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Лабораторная№1.cpp
+  Проект2.vcxproj -> D:\Labs\Lab\Lab_1\Debug\Лабораторная №1.exe
+  Проект2.vcxproj -> D:\Labs\Lab\Lab_1\Debug\Лабораторная №1.pdb (Partial PDB)

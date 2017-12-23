@@ -1,4 +1,0 @@
-﻿  Lab_2.cpp
-d:\labs\lab\lab_2\consoleapplication3\lab_2.cpp(23): warning C4715: check: значение возвращается не при всех путях выполнения
-  ConsoleApplication3.vcxproj -> D:\Labs\Lab\Lab_2\Debug\ConsoleApplication3.exe
-  ConsoleApplication3.vcxproj -> D:\Labs\Lab\Lab_2\Debug\ConsoleApplication3.pdb (Partial PDB)

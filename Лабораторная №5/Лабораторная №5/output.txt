@@ -1,2 +1,0 @@
-Film Name                     |Author Name         |Author Suname       |      Year|    Budget|Box Office
-dbftg eg                      |egge                |gegce               |      3456|        34|        54
